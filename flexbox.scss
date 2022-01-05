@@ -1,0 +1,16 @@
+.container {
+  border: dashed 2px red;
+  display: flex; /* Creates container with flex children */
+  //justify-content: center; /* This can take the place of align, etc. on children*/
+  //justify-content: space-around;
+  justify-content: space-between;
+  flex-wrap: wrap; /*Moves content to the next line if they "touch" */
+  > div {
+    background: #373142;
+    color: #FFF;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+  }
+}
