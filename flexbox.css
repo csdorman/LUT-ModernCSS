@@ -3,8 +3,11 @@
   display: flex;
   /* Creates container with flex children */
   justify-content: space-between;
+  /*Evenly distributes space between elements (not on end) */
   flex-wrap: wrap;
   /*Moves content to the next line if they "touch" */
+  align-items: center;
+  /* Uses the cross axis. Can use flex-start and flex-end as well. */
 }
 .container > div {
   background: #373142;
@@ -13,6 +16,9 @@
   height: 100px;
   text-align: center;
   line-height: 100px;
+}
+.container > div:nth-child(2) {
+  height: 150px;
 }
 
 /*# sourceMappingURL=flexbox.css.map */
