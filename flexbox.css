@@ -8,6 +8,8 @@
   /*Moves content to the next line if they "touch" */
   align-items: center;
   /* Uses the cross axis. Can use flex-start and flex-end as well. */
+  align-content: space-between;
+  /* Takes effect with smaller screen sizes */
 }
 .container > div {
   background: #373142;

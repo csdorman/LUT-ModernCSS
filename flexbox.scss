@@ -1,12 +1,10 @@
 .container {
   border: dashed 2px red;
   display: flex; /* Creates container with flex children */
-  //justify-content: center; /* This can take the place of align, etc. on children*/
-  //justify-content: space-around; /*Evenly distributes space around elements */
   justify-content: space-between; /*Evenly distributes space between elements (not on end) */
   flex-wrap: wrap; /*Moves content to the next line if they "touch" */
   align-items: center; /* Uses the cross axis. Can use flex-start and flex-end as well. */
-  
+  align-content: space-between; /* Takes effect with smaller screen sizes */
   > div {
     background: #373142;
     color: #FFF;
