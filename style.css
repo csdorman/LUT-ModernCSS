@@ -46,7 +46,14 @@ To make a grid (or more rigid layout), use CSS Grid
 .gridcontainer {
   display: grid;
   /* Defines the div as a grid. Needs more explicit direction than flex */
-  grid: 100px 100px/100px auto 100px 100px;
+  /*
+  Shorthand syntax:
+  grid: 100px (will automatically create new rows (b/c of grid-autoflow)) / 100px auto 100px 100px
+  grid: 100px / repeat(4, 100px) auto (will create 5 total columns)
+  grid: 100px / repeat(4, auto 50px) (will create 6 total columns)
+  grid: 100px / repeat(2, 1fr 2fr) (fr is a fractional unit - this makes 4 total columns, but divided into 6 equal chunks)
+   */
+  grid: 100px 100px/repeat(3, 1fr);
   grid-gap: 10px 10px;
   /* Row and column gap. Could also be a single number if they are the same. */
 }
