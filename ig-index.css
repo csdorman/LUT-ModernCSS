@@ -1,3 +1,132 @@
+:root {
+  --red-border: 3px dashed red;
+  --blue-border: 3px dashed blue;
+}
 
+html {
+  box-sizing: border-box;
+}
+html *, html *:before, html *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: #ddd;
+  color: #333;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 5vh;
+  background: whitesmoke;
+  border: var(--red-border);
+}
+.header input {
+  display: none;
+}
+
+@media (min-width: 700px) {
+  .header input {
+    display: block;
+  }
+}
+.header-content {
+  border: var(--blue-border);
+  max-width: 930px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.main-nav > ul > li {
+  display: inline-block;
+}
+
+main {
+  margin: 6vh auto;
+  border: var(--red-border);
+  max-width: 930px;
+}
+
+.user-info {
+  border: var(--blue-border);
+  display: grid;
+  padding: 10px;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: repeat(3, auto);
+}
+.user-info h1 {
+  margin: 0;
+}
+.user-info p {
+  grid-column: 1/-1;
+}
+.user-info .user-stats {
+  grid-row: 3;
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 700px) {
+  .user-info {
+    grid-template-columns: 1fr 2fr;
+  }
+  .user-info p {
+    grid-row: 3;
+    grid-column: auto;
+  }
+  .user-info .user-stats {
+    grid-row: auto;
+    display: block;
+    grid-column: auto;
+  }
+}
+.avatar {
+  border-radius: 50%;
+  width: 70px;
+  justify-self: center;
+}
+
+@media (min-width: 700px) {
+  .avatar {
+    width: 152px;
+    grid-row: 1/-1;
+  }
+}
+.feed-nav {
+  display: flex;
+  justify-content: center;
+}
+.feed-nav a {
+  display: block;
+  padding: 10px;
+}
+
+.news-feed {
+  border: var(--blue-border);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+}
+.news-feed > img {
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .news-feed {
+    grid-gap: 28px;
+  }
+}
 
 /*# sourceMappingURL=ig-index.css.map */
